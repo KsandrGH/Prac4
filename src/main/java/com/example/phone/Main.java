@@ -13,9 +13,10 @@ import java.nio.file.Paths;
  *   java -jar target/phone-variant6-1.0.0.jar data/input.txt
  *   java -jar target/phone-variant6-1.0.0.jar data/input.txt data/output.txt
  *   java -jar target/phone-variant6-1.0.0.jar data/input.txt data/output.txt --cc=44
+ *   Для больших зменений
+ *   ещё текст
  */
 public class Main {
-
 
     public static void main(String[] args) {
         if (args.length < 1) {
