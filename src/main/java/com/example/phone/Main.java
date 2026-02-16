@@ -16,6 +16,7 @@ import java.nio.file.Paths;
  */
 public class Main {
 
+
     public static void main(String[] args) {
         if (args.length < 1) {
             System.err.println("Usage: java -jar phone-variant6-1.0.0.jar <inputFile> [outputFile] [--cc=1]");
