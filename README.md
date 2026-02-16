@@ -68,16 +68,6 @@ java -jar target/phone-variant6-1.0.0.jar data/input.txt data/output.txt --cc=44
 ```
 Тогда будет формат `+44 (AAA) BBB-CC-DD`.
 
-## Как отправить на GitHub
-
-```bash
-git init
-git add .
-git commit -m "init: variant 6 phone normalization"
-git branch -M main
-git remote add origin https://github.com/<YOUR_LOGIN>/<REPO_NAME>.git
-git push -u origin main
-```
 
 ## Где смотреть основную логику
 - `src/main/java/com/example/phone/PhoneNormalizer.java`
