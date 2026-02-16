@@ -1,0 +1,40 @@
+name: my
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: ☕ Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: 🔍 Show Java version
+        run: java -version
+
+      - name: 🛠 Compile project
+        run: |
+          mkdir -p out
+          find src -name "*.java" > sources.txt
+          
+          if [ ! -s sources.txt ]; then
+            echo "No Java files found!"
+            exit 1
+          fi
+          
+          javac -d out @sources.txt
+          echo "Compilation successful ✅"
+
+      - name: ✅ CI finished
+        run: echo "Continuous Integration works!"
